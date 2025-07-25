@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Budget App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Budget: ₱<span id="budget">0</span> ✏️</h2>
+    <div class="input-group">
+      <input id="itemName" type="text" placeholder="Item">
+      <input id="itemPrice" type="number" placeholder="₱">
+      <button onclick="addItem()">Add</button>
+    </div>
+    <ul id="itemList"></ul>
+    <h3>Remaining: ₱<span id="remaining">0</span></h3>
+    <div class="button-group">
+      <button onclick="exportData()">Export</button>
+      <button onclick="clearAll()">Clear</button>
+    </div>
+  </div>
+</body>
+</html>

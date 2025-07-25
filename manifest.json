@@ -1,0 +1,9 @@
+{
+  "name": "Grocery Budget App",
+  "short_name": "GroceryApp",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00c853",
+  "icons": []
+}
