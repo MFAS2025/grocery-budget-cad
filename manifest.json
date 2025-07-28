@@ -1,9 +1,20 @@
 {
   "name": "Grocery Budget App",
-  "short_name": "GroceryApp",
-  "start_url": "./index.html",
+  "short_name": "BudgetApp",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#00c853",
-  "icons": []
+  "theme_color": "#1e90ff",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
