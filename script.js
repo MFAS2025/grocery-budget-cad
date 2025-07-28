@@ -52,14 +52,31 @@ function clearAll() {
 
 function editBudget() {
   const newBudget = parseFloat(prompt("Enter new budget in CAD:"));
+
   if (!isNaN(newBudget) && newBudget >= 0) {
-    const spent = budget - remaining;
+    const spent = getTotalSpent();
+    if (newBudget < spent) {
+      alert(`You already spent ${formatCurrency(spent)}. Budget must be at least this amount.`);
+      return;
+    }
     budget = newBudget;
     remaining = budget - spent;
     updateDisplay();
   } else {
     alert("Invalid budget input.");
   }
+}
+
+function getTotalSpent() {
+  let spent = 0;
+  Array.from(itemList.children).forEach(li => {
+    const text = li.textContent;
+    const match = text.match(/\$([\d,]+\.\d{2})/); // match currency like $12.50
+    if (match) {
+      spent += parseFloat(match[1].replace(/,/g, ''));
+    }
+  });
+  return spent;
 }
 
 // Initial budget prompt on load
