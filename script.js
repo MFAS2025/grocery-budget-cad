@@ -71,14 +71,13 @@ function getTotalSpent() {
   let spent = 0;
   Array.from(itemList.children).forEach(li => {
     const text = li.textContent;
-    const match = text.match(/\$([\d,]+(?:\.\d{1,2})?)/); // match $10 or $10.50
+    const match = text.match(/\$([\d,]+(?:\.\d{1,2})?)/);
     if (match) {
       spent += parseFloat(match[1].replace(/,/g, ''));
     }
   });
   return spent;
 }
-
 
 // Initial budget prompt on load
 budget = parseFloat(prompt("Enter your budget in CAD:"));
