@@ -11,14 +11,21 @@
 </head>
 <body>
   <div class="container">
-    <h2>Budget: $<span id="budget">0</span> ✏️</h2>
+    <h2>
+      Budget: $<span id="budget">0</span>
+      <button onclick="editBudget()" class="edit-button">Edit</button>
+    </h2>
+
     <div class="input-group">
       <input id="itemName" type="text" placeholder="Item" />
       <input id="itemPrice" type="number" placeholder="$" />
       <button onclick="addItem()">Add</button>
     </div>
+
     <ul id="itemList"></ul>
+
     <h3>Remaining: $<span id="remaining">0</span></h3>
+
     <div class="button-group">
       <button onclick="exportData()">Export</button>
       <button onclick="clearAll()">Clear</button>
