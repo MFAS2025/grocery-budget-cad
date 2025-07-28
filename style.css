@@ -19,6 +19,13 @@ body {
   text-align: center;
 }
 
+.logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 h2, h3 {
   margin: 12px 0;
   font-size: 1.2rem;
@@ -36,6 +43,7 @@ h2, h3 {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  width: 100%;
 }
 
 .input-group button {
@@ -46,6 +54,7 @@ h2, h3 {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  width: 100%;
 }
 
 .input-group button:hover {
@@ -89,11 +98,12 @@ li {
   padding: 6px 0;
   border-bottom: 1px solid #eee;
   font-size: 0.95rem;
+  word-break: break-word;
 }
 
 .edit-button {
   margin-left: 10px;
-  padding: 3px 8px;
+  padding: 4px 10px;
   font-size: 0.85rem;
   background: #ff9800;
   color: white;
@@ -106,18 +116,42 @@ li {
   background: #e68900;
 }
 
-/* Responsive */
-@media (min-width: 500px) {
+/* Responsive for larger screens */
+@media (min-width: 600px) {
+  .container {
+    max-width: 700px;
+    padding: 24px;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+
   .input-group {
     flex-direction: row;
+    gap: 10px;
   }
 
   .input-group input {
     flex: 1;
+    margin: 0;
+  }
+
+  .input-group button {
+    width: auto;
+    white-space: nowrap;
   }
 
   .button-group {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .button-group button {
+    flex: 1;
+  }
+
+  .logo {
+    max-width: 250px;
   }
 }
